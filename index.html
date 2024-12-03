@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="globals.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>CGPA Calculator</h1>
+
+      <table id="cgpaTable">
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Grade</th>
+            <th>Unit Load</th>
+            <th>Action</th>
+            <!-- New column for minus button -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" placeholder="Course Name" /></td>
+            <td>
+              <select>
+                <option value="5">A</option>
+                <option value="4">B</option>
+                <option value="3">C</option>
+                <option value="2">D</option>
+                <option value="1">E</option>
+                <option value="0">F</option>
+              </select>
+            </td>
+            <td><input type="number" min="1" max="6" placeholder="Unit" /></td>
+            <td><button class="removeRow">-</button></td>
+            <!-- Minus button -->
+          </tr>
+        </tbody>
+      </table>
+      <button id="addRow">Add Row</button>
+      <button id="calculate">Calculate CGPA</button>
+
+      <div id="result"></div>
+
+      <button id="downloadCSV" class="download-btn">Download CSV</button>
+      <button id="downloadPDF" class="download-btn">Download PDF</button>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
